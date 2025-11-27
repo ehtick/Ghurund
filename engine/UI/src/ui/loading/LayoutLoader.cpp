@@ -69,7 +69,7 @@ namespace Ghurund::UI {
             Logger::log(LogType::ERR0R, _T("Missing control tag.\n"));
             throw InvalidFormatException("Missing control tag.\n");
         }
-        AString namespaceName = Ghurund::UI::NAMESPACE_NAME;
+        AString namespaceName = DEFAULT_CONTROL_NAMESPACE;
         auto namespaceAttr = child->FindAttribute("namespace");
         if (namespaceAttr)
             namespaceName = namespaceAttr->Value();
@@ -166,7 +166,7 @@ namespace Ghurund::UI {
 			Logger::log(LogType::ERR0R, _T("Missing 'layout' attribute.\n"));
 			throw InvalidDataException("Missing 'layout' attribute.\n");
 		} else {
-			AString namespaceName = Ghurund::UI::NAMESPACE_NAME;
+			AString namespaceName = DEFAULT_CONTROL_NAMESPACE;
 			auto namespaceAttr = xml.FindAttribute("namespace");
 			if (namespaceAttr)
 				namespaceName = namespaceAttr->Value();

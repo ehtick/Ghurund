@@ -31,6 +31,8 @@ namespace Ghurund::UI {
 		PropertyLoaderCollection propertyLoaders;
 		Map<AString, const BaseConstructor*> types;
 
+		static inline const AString DEFAULT_CONTROL_NAMESPACE = LayoutLoader::TYPE.Namespace;
+
 	protected:
 		virtual Resource* loadInternal(
 			MemoryInputStream& stream,
